@@ -2,7 +2,7 @@ import Link from 'next/link';
 
 const Card = ({ story }) => {
   const imageUrl =
-    process.env.NODE_ENV !== "development"
+    process.env.NODE_ENV == "development"
       ? story.image.url
       : process.env.API_URL + story.image.url;
   return (
