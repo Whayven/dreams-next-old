@@ -1,4 +1,4 @@
-import Stories from "../components/Stories"; 
+import Stories from "../components/stories"; 
 import Query from "../components/query";
 import STORY_QUERY from "../apollo/queries/story/stories"; 
 
