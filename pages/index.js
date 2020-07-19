@@ -1,13 +1,13 @@
-import Example from "../components/example"; 
+import Stories from "../components/Stories"; 
 import Query from "../components/query";
-import EXAMPLE_QUERY from "../apollo/queries/example/examples"; 
+import STORY_QUERY from "../apollo/queries/story/stories"; 
 
 const Component = () => { 
   return (
     <div>
-      <Query query={EXAMPLE_QUERY}> 
-        {({ data: { examples} }) => { 
-          return <Example examples={examples} />; 
+      <Query query={STORY_QUERY}> 
+        {({ data: { stories} }) => { 
+          return <Stories stories={stories} className="flex mb-4" />; 
         }}
       </Query>
     </div>
