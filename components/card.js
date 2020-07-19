@@ -7,7 +7,7 @@ const Card = ({ story }) => {
       : process.env.API_URL + story.image.url;
   return (
     <Link href={{ pathname: "story", query: { id: story.id } }}>
-      <a className="">
+      <a>
         <div className="max-w-sm rounded overflow-hidden shadow-lg m-4 border-2 transition duration-500 ease-in-out transform hover:scale-110">
           <img
             className="object-cover h-56 w-full p-2"

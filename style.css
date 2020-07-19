@@ -1,5 +1,20 @@
 /* purgecss start ignore */
 @tailwind base;
+html {
+    @apply h-full
+}
+
+body {
+    @apply flex;
+    @apply flex-col;
+    @apply h-full;
+}
+
+#__next {
+    @apply flex;
+    @apply flex-col;
+    @apply h-full;
+}
 @tailwind components;
 /* purgecss end ignore */
 @tailwind utilities;

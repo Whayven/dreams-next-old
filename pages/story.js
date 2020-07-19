@@ -3,6 +3,7 @@ import Query from "../components/query";
 import STORY_QUERY from "../apollo/queries/story/story";
 import Markdown from "react-markdown";
 import Moment from "react-moment";
+import StyledParagraph from "../components/styledParagraph";
 
 const Story = () => { 
   const router = useRouter(); 
@@ -13,6 +14,7 @@ const Story = () => {
         process.env.NODE_ENV !== "development"
           ? story.image.url
           : process.env.API_URL + story.image.url;
+
         return ( 
           <div className="flex flex-col justify-center pl-8 pr-8"> 
             <div className="text-center">
@@ -24,7 +26,12 @@ const Story = () => {
               />
             </div> 
             <div> 
-             <Markdown source={story.content} />
+             <Markdown 
+             source={story.content}
+             renderers={{
+               paragraph: StyledParagraph
+             }} 
+            />
              <br/>
              <p>
                 <Moment className="cursor-default" format="MMM Do YYYY">{story.published}</Moment>
